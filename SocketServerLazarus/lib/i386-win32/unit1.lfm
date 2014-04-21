@@ -1,0 +1,66 @@
+object Form1: TForm1
+  Left = 338
+  Height = 391
+  Top = 280
+  Width = 321
+  Caption = 'Form1'
+  ClientHeight = 391
+  ClientWidth = 321
+  OnCreate = FormCreate
+  LCLVersion = '1.0.14.0'
+  object Button1: TButton
+    Left = 24
+    Height = 25
+    Top = 296
+    Width = 75
+    Caption = 'ATIVAR'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 121
+    Height = 25
+    Top = 296
+    Width = 75
+    Caption = 'DESATIVAR'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 221
+    Height = 25
+    Top = 296
+    Width = 75
+    Caption = 'SAIR'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 112
+    Height = 16
+    Top = 13
+    Width = 71
+    Caption = 'DESATIVADO'
+    ParentColor = False
+  end
+  object Memo1: TMemo
+    Left = 24
+    Height = 234
+    Top = 40
+    Width = 280
+    TabOrder = 3
+  end
+  object IdTCPServer1: TIdTCPServer
+    Bindings = <    
+      item
+        IP = '127.0.0.1'
+        Port = 40000
+      end>
+    DefaultPort = 0
+    OnConnect = IdTCPServer1Connect
+    OnDisconnect = IdTCPServer1Disconnect
+    OnExecute = IdTCPServer1Execute
+    left = 120
+    top = 336
+  end
+end
